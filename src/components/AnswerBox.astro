@@ -1,0 +1,41 @@
+---
+// Bloque "Respuesta directa": el patrón answer-first como componente.
+// Colócalo inmediatamente después del H1 en cada artículo. Contiene la
+// respuesta autónoma y citable que un LLM puede extraer sin contexto.
+// Uso:
+//   <AnswerBox>
+//     El SEO local en Chile cuesta entre $X y $Y mensuales. Los factores
+//     que determinan el precio son A, B y C (Fuente, 2026).
+//   </AnswerBox>
+---
+
+<div class="answer-box">
+  <span class="answer-label">Respuesta directa</span>
+  <p class="answer-text"><slot /></p>
+</div>
+
+<style>
+  .answer-box {
+    border-left: 4px solid var(--cobalt);
+    background: #fff;
+    border-radius: 0 10px 10px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0 2.5rem;
+    box-shadow: 0 1px 3px rgba(18, 22, 27, 0.06);
+  }
+  .answer-label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cobalt);
+    margin-bottom: 0.5rem;
+  }
+  .answer-text {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+</style>

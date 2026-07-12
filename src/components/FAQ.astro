@@ -1,0 +1,48 @@
+---
+// Componente FAQ: recibe un array de {q, a} y genera automáticamente
+// (1) el HTML visible con <details> nativo (cero JavaScript) y
+// (2) el schema FAQPage en JSON-LD.
+// Uso:
+//   <FAQ items={[{ q: '¿Pregunta?', a: 'Respuesta.' }, ...]} />
+const { items = [], title = 'Preguntas frecuentes' } = Astro.props;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((it) => ({
+    '@type': 'Question',
+    name: it.q,
+    acceptedAnswer: { '@type': 'Answer', text: it.a },
+  })),
+};
+---
+
+<section class="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">{title}</h2>
+  {items.map((it) => (
+    <details>
+      <summary>{it.q}</summary>
+      <p>{it.a}</p>
+    </details>
+  ))}
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<style>
+  .faq { margin: 4rem 0; }
+  .faq h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+  details {
+    border-top: 1px solid var(--line);
+    padding: 1rem 0;
+  }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+  }
+  summary:hover { color: var(--cobalt); }
+  details p { margin: 0.75rem 0 0.25rem; color: var(--ink-soft); max-width: 46rem; }
+</style>

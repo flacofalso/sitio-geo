@@ -1,0 +1,36 @@
+# robots.txt — permisivo con crawlers de IA para visibilidad máxima
+# Reemplaza tudominio.cl por tu dominio real.
+
+User-agent: *
+Allow: /
+
+# --- Búsqueda y citación en asistentes de IA ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# --- Bots sin beneficio de citación (opcional bloquear) ---
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://tudominio.cl/sitemap-index.xml

@@ -1,0 +1,127 @@
+---
+import Base from '../../layouts/Base.astro';
+import AnswerBox from '../../components/AnswerBox.astro';
+import FAQ from '../../components/FAQ.astro';
+
+// ─────────────────────────────────────────────────────────────
+// PLANTILLA DE ARTÍCULO CITABLE — usa este archivo como modelo.
+// Checklist antes de publicar:
+//  [ ] H1 = la pregunta/consulta objetivo, tal como la haría una persona
+//  [ ] AnswerBox con respuesta autónoma en las primeras líneas
+//  [ ] Cada dato importante con fuente + fecha (verificado por ti)
+//  [ ] H2/H3 que responden sub-preguntas completas
+//  [ ] Al menos una tabla o lista extraíble
+//  [ ] FAQ al final (genera schema FAQPage)
+//  [ ] Revisado y editado por un humano (tú)
+// ─────────────────────────────────────────────────────────────
+
+export const frontmatter = {
+  title: '¿Qué es GEO y cómo hacer que la IA recomiende tu negocio?',
+  description:
+    'Guía práctica de Generative Engine Optimization (GEO): qué es, cómo deciden los asistentes de IA a quién citar, y los pasos concretos para que ChatGPT, Claude y Gemini mencionen tu negocio.',
+  publishedDate: '2026-07-06',
+  publishedLabel: 'Julio 2026',
+};
+
+const faqItems = [
+  {
+    q: '¿GEO reemplaza al SEO?',
+    a: 'No. La autoridad SEO tradicional sigue siendo la señal principal que los sistemas de IA usan para evaluar qué fuentes son creíbles. GEO se construye sobre una base SEO sólida: si tu sitio no aparece en los resultados que el asistente recupera al buscar, no puede citarte.',
+  },
+  {
+    q: '¿Funciona el keyword stuffing en GEO?',
+    a: 'No. Los estudios sobre motores generativos muestran que repetir palabras clave rinde mal, porque los modelos de lenguaje priorizan calidad, fluidez y datos verificables por sobre la densidad de términos.',
+  },
+];
+---
+
+<Base
+  title={frontmatter.title}
+  description={frontmatter.description}
+  type="article"
+  publishedDate={frontmatter.publishedDate}
+>
+  <article class="post">
+    <p class="post-meta">{frontmatter.publishedLabel} · Guía</p>
+    <h1>{frontmatter.title}</h1>
+
+    <AnswerBox>
+      GEO (Generative Engine Optimization) es el conjunto de técnicas para que
+      asistentes de IA como ChatGPT, Claude, Gemini y Perplexity citen o
+      recomienden tu negocio en sus respuestas. Se logra combinando tres cosas:
+      base técnica accesible para crawlers de IA, contenido con respuestas
+      directas y datos verificables, y menciones de tu marca fuera de tu sitio.
+      Las primeras citas suelen aparecer en 4 a 8 semanas de trabajo consistente.
+    </AnswerBox>
+
+    <h2>Por qué importa ahora</h2>
+    <p>
+      El comportamiento de búsqueda cambió: cerca del 37% de las búsquedas de
+      información parte hoy en un chatbot de IA en lugar de Google (Impactiq,
+      enero 2026), y el tráfico referido desde Perplexity y ChatGPT creció más
+      de 300% en el último año (BrightEdge/Semrush, Q1 2026). Cuando un
+      asistente responde "¿qué empresa recomiendas para X?", cita dos o tres
+      fuentes. Si no eres una de ellas, ese cliente potencial nunca supo que
+      existías.
+    </p>
+
+    <h2>Cómo decide un asistente de IA a quién citar</h2>
+    <p>
+      Hay dos mecanismos. El primero es el entrenamiento del modelo: lento y
+      difícil de influir. El segundo —donde se juega el partido— es la búsqueda
+      en tiempo real: ante una pregunta actual, el asistente busca en la web y
+      sintetiza los mejores resultados. ChatGPT se apoya fuertemente en el
+      índice de Bing y Gemini en el de Google, por lo que el posicionamiento
+      tradicional sigue siendo la puerta de entrada. Dentro de esos resultados,
+      los modelos prefieren contenido con estadísticas verificables, citas a
+      fuentes y redacción clara: esa combinación puede aumentar la visibilidad
+      en respuestas generativas hasta 40% (estudio GEO, Princeton/Georgia
+      Tech, validado en Perplexity con mejoras de 37%).
+    </p>
+
+    <h2>Los tres pilares, en orden</h2>
+
+    <h3>1. Base técnica</h3>
+    <ul>
+      <li>Contenido en HTML estático: muchos crawlers de IA no ejecutan JavaScript.</li>
+      <li>robots.txt que permite GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot y Google-Extended.</li>
+      <li>Schema JSON-LD: Organization, Person, Article, FAQPage.</li>
+      <li>Velocidad (LCP bajo 2,5 s) e IndexNow para indexación inmediata en Bing.</li>
+    </ul>
+
+    <h3>2. Contenido citable</h3>
+    <p>
+      Cada página responde su pregunta principal en las primeras dos o tres
+      oraciones, de forma autónoma. Después desarrolla con datos con fuente y
+      fecha, tablas comparativas y definiciones explícitas. Un modelo de
+      lenguaje extrae fragmentos: si tu respuesta está enterrada en el párrafo
+      ocho, extraerá la de otro sitio.
+    </p>
+
+    <h3>3. Señales fuera de tu sitio</h3>
+    <p>
+      Los asistentes recomiendan entidades que ven mencionadas de forma
+      consistente en múltiples lugares: directorios del rubro, prensa, foros y
+      comunidades donde se discute el tema. Construir estas menciones toma
+      entre 2 y 6 meses en impactar las respuestas, así que es lo primero que
+      conviene empezar y lo último en rendir.
+    </p>
+
+    <FAQ items={faqItems} title="Preguntas frecuentes sobre GEO" />
+  </article>
+</Base>
+
+<style>
+  .post { max-width: 46rem; padding: 3rem 0; }
+  .post h1 { font-size: 2.2rem; }
+  .post-meta {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .post h2 { font-size: 1.5rem; margin-top: 2.75rem; }
+  .post h3 { font-size: 1.15rem; margin-top: 2rem; }
+  .post ul li { margin-bottom: 0.5rem; }
+</style>

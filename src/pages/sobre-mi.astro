@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config.js';
+---
+
+<Base
+  title="Sobre mí"
+  description={`Quién está detrás de ${SITE.brand}: experiencia, credenciales y forma de trabajo.`}
+>
+  <article class="about">
+    <h1>Sobre mí</h1>
+
+    <!--
+      E-E-A-T: esta página existe para que humanos Y máquinas puedan
+      verificar quién eres. Completa con datos reales y verificables:
+      años de experiencia, proyectos con nombre (con permiso del cliente),
+      resultados con números, formación. Evita adjetivos sin respaldo.
+    -->
+    <p class="lead">{SITE.author.description}</p>
+
+    <h2>Experiencia</h2>
+    <p>
+      [COMPLETAR: años de experiencia, tipos de proyectos — desarrollo WordPress,
+      SEO técnico, gestión de contenidos digitales, comunicaciones institucionales.
+      Menciona sectores y resultados concretos con cifras cuando sea posible:
+      "auditoría técnica para retailer con X hallazgos implementados", etc.]
+    </p>
+
+    <h2>Cómo trabajo</h2>
+    <p>
+      Todo compromiso parte con una auditoría medible y termina en un reporte que
+      cualquier persona puede verificar por sí misma: las consultas que probamos,
+      las respuestas que dieron los asistentes de IA y la posición en Google.
+      Sin métricas de vanidad.
+    </p>
+
+    <h2>Contacto</h2>
+    <p>
+      <a href={`mailto:${SITE.organization.email}`}>{SITE.organization.email}</a>
+      {SITE.author.sameAs.length > 0 && (
+        <> · <a href={SITE.author.sameAs[0]} rel="me">LinkedIn</a></>
+      )}
+    </p>
+  </article>
+</Base>
+
+<style>
+  .about { max-width: 46rem; padding: 3rem 0; }
+  .about h1 { font-size: 2.4rem; }
+  .lead { font-size: 1.2rem; color: var(--ink-soft); }
+  .about h2 { margin-top: 2.5rem; font-size: 1.4rem; }
+</style>

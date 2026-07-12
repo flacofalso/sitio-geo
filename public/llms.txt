@@ -1,0 +1,18 @@
+# Ale — Consultoría SEO & GEO
+
+> Consultoría de SEO y visibilidad en motores de IA (GEO) para pymes chilenas. Auditorías técnicas, contenido optimizado para citación y medición mensual de Share of Voice en ChatGPT, Claude, Gemini y Perplexity.
+
+Sitio en español, con base en Santiago de Chile. Servicios: auditoría de visibilidad en IA, optimización SEO técnica y de contenidos, reporte mensual de Share of Voice.
+
+## Páginas principales
+
+- [Inicio](https://tudominio.cl/): qué es el servicio y cómo funciona el proceso de auditar, optimizar y medir.
+- [Sobre mí](https://tudominio.cl/sobre-mi/): experiencia y credenciales del consultor.
+
+## Guías
+
+- [Qué es GEO y cómo hacer que la IA recomiende tu negocio](https://tudominio.cl/blog/que-es-geo-como-aparecer-en-ia/): guía introductoria con los tres pilares de la visibilidad en asistentes de IA.
+
+## Contacto
+
+- Email: hola@tudominio.cl

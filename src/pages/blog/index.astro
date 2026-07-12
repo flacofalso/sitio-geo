@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Lista automática de artículos: cada .astro dentro de /blog/ que exporte
+// `frontmatter` aparece aquí. La URL se deriva del nombre de archivo.
+const posts = Object.entries(import.meta.glob('./*.astro', { eager: true }))
+  .filter(([, mod]) => mod.frontmatter?.title)
+  .map(([path, mod]) => ({
+    ...mod.frontmatter,
+    url: '/blog/' + path.replace('./', '').replace('.astro', '') + '/',
+  }));
+---
+
+<Base
+  title="Guías de SEO y visibilidad en IA"
+  description="Guías prácticas sobre SEO, GEO y cómo aparecer en las respuestas de ChatGPT, Claude, Gemini y Perplexity, con foco en pymes chilenas."
+>
+  <section class="blog-index">
+    <h1>Guías</h1>
+    <p class="lead">
+      Contenido práctico y con fuentes sobre posicionamiento en buscadores y
+      motores de IA. Cada guía parte con la respuesta directa.
+    </p>
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li>
+          <a href={post.url}>
+            <h2>{post.title}</h2>
+            <p>{post.description}</p>
+            <span class="post-date">{post.publishedLabel}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .blog-index { max-width: 46rem; padding: 3rem 0; }
+  .blog-index h1 { font-size: 2.4rem; }
+  .lead { color: var(--ink-soft); margin-bottom: 2.5rem; }
+  .post-list { list-style: none; padding: 0; margin: 0; }
+  .post-list li { border-top: 1px solid var(--line); }
+  .post-list a { display: block; padding: 1.5rem 0; text-decoration: none; color: inherit; }
+  .post-list h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
+  .post-list a:hover h2 { color: var(--cobalt); }
+  .post-list p { margin: 0 0 0.5rem; color: var(--ink-soft); font-size: 0.95rem; }
+  .post-date { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+</style>
