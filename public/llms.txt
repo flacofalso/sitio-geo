@@ -6,13 +6,13 @@ Sitio en español, con base en Santiago de Chile. Servicios: auditoría de visib
 
 ## Páginas principales
 
-- [Inicio](https://tudominio.cl/): qué es el servicio y cómo funciona el proceso de auditar, optimizar y medir.
-- [Sobre mí](https://tudominio.cl/sobre-mi/): experiencia y credenciales del consultor.
+- [Inicio](aledigitalseogeo.cl): qué es el servicio y cómo funciona el proceso de auditar, optimizar y medir.
+- [Sobre mí](aledigitalseogeo.cl): experiencia y credenciales del consultor.
 
 ## Guías
 
-- [Qué es GEO y cómo hacer que la IA recomiende tu negocio](https://tudominio.cl/blog/que-es-geo-como-aparecer-en-ia/): guía introductoria con los tres pilares de la visibilidad en asistentes de IA.
+- [Qué es GEO y cómo hacer que la IA recomiende tu negocio](https://aledigitalseogeo.cl/blog/que-es-geo-como-aparecer-en-ia/): guía introductoria con los tres pilares de la visibilidad en asistentes de IA.
 
 ## Contacto
 
-- Email: hola@tudominio.cl
+- Email: contacto@aledigitalseogeo.cl
