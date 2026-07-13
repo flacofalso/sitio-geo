@@ -8,7 +8,7 @@
 
 export const SITE = {
   // Cambia por tu dominio real antes de desplegar
-  url: 'https://tudominio.cl',
+  url: 'https://aledigitalseogeo.cl',
 
   // Nombre de la marca / consultor (entidad principal)
   brand: 'Ale — Consultoría SEO & GEO',
