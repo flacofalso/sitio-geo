@@ -1,10 +1,9 @@
-# robots.txt — permisivo con crawlers de IA para visibilidad máxima
-# Reemplaza tudominio.cl por tu dominio real.
+# robots.txt - permisivo con crawlers de IA para visibilidad maxima
 
 User-agent: *
 Allow: /
 
-# --- Búsqueda y citación en asistentes de IA ---
+# --- Busqueda y citacion en asistentes de IA ---
 User-agent: GPTBot
 Allow: /
 
@@ -29,7 +28,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# --- Bots sin beneficio de citación (opcional bloquear) ---
+# --- Bots sin beneficio de citacion ---
 User-agent: Bytespider
 Disallow: /
 
