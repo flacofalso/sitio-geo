@@ -28,8 +28,8 @@ export const SITE = {
       'Especialista en marketing digital y desarrollo web con experiencia en SEO técnico, WordPress y estrategia de contenidos para pymes en Chile.',
     sameAs: [
       // Perfiles públicos que verifican la entidad. Completa:
-      'https://www.linkedin.com/in/TU-PERFIL',
-      // 'https://github.com/TU-USUARIO',
+      'https://www.linkedin.com/in/aaravenaale',
+      // 'https://github.com/flacofalso',
     ],
   },
 
@@ -39,6 +39,6 @@ export const SITE = {
     addressLocality: 'Santiago',
     addressRegion: 'Región Metropolitana',
     addressCountry: 'CL',
-    email: 'hola@tudominio.cl',
+    email: 'alejandroalexis.aravena@gmail.com',
   },
 };
