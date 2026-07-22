@@ -6,8 +6,8 @@ Sitio en español, con base en Santiago de Chile. Servicios: auditoría de visib
 
 ## Páginas principales
 
-- [Inicio](aledigitalseogeo.cl): qué es el servicio y cómo funciona el proceso de auditar, optimizar y medir.
-- [Sobre mí](aledigitalseogeo.cl): experiencia y credenciales del consultor.
+- [Inicio](https://aledigitalseogeo.cl/): qué es el servicio y cómo funciona el proceso de auditar, optimizar y medir.
+- [Sobre mí](https://aledigitalseogeo.cl/sobre-mi/): experiencia y credenciales del consultor.
 
 ## Guías
 
@@ -15,4 +15,4 @@ Sitio en español, con base en Santiago de Chile. Servicios: auditoría de visib
 
 ## Contacto
 
-- Email: contacto@aledigitalseogeo.cl
+- Email: alejandroalexis.aravena@gmail.com
